@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title</title>
+    
+</head>
+<style>
+    h1 {
+        color: red;
+        text-align: center;
+        border: 3px solid red;
+    
+    }
+    input {
+        height: 30px;
+        width: 70px;
+        margin-top: 20px;
+        margin-right: 10px;
+        border: 2px solid rgb(0, 216, 0);
+        border-radius: 5px;
+    }
+    .req {
+        color: blue;
+        margin-top: 60px;
+    }
+    h2 {
+        color: rgb(255, 0, 0);
+    }
+    button {
+        background-color: rgb(0, 216, 0);
+        font-size: large;
+        font-weight: bold;
+        color: white;
+        height: 40px;
+        width: 100px;
+        border-radius: 5px;
+    }
+</style>
+<body>
+    <h1>Calculator</h1>
+    <h2 class="req">Input two numbers :<br>
+        <input id="in1" type="number" placeholder="num1">
+        <input id="in2" type="number" placeholder="num2">
+        <button id="in3" onclick="inpt()">Click me </button>
+    </h2>
+    <h2 id="d1"></h2>
+    <h2 id="d2"></h2>
+    <h2 id="d3"></h2>
+    <h2 id="d4"></h2>
+</body>
+<script>
+    function inpt() {
+        var a = document.getElementById("in1").value;
+        var b = document.getElementById("in2").value;
+        sum =  Number(a) + Number(b)
+        sub = a-b
+        mult = a*b
+        divide = a/b
+    
+        document.getElementById("d1").innerText = "Addition  =  " + sum
+        document.getElementById("d2").innerText = "Substraction  =  " + sub
+        document.getElementById("d3").innerText = "Multiplication  =  " + mult
+        document.getElementById("d4").innerText = "Division  =  " + divide
+    }
+    
+</script>
+</html>
